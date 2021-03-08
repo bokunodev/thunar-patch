@@ -3,7 +3,7 @@
 patch thunar/thunar-window.c thunar-window.patch
 
 ./autogen.sh \
-	--prefix=/usr \
+	--prefix=/usr/local \
 	--sysconfdir=/etc \
 	--libexecdir=/usr/lib \
 	--localstatedir=/var \
