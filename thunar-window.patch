@@ -1,0 +1,39 @@
+diff --git a/thunar/thunar-window.c b/thunar/thunar-window.c
+index 28ab0713..04836f2a 100644
+--- a/thunar/thunar-window.c
++++ b/thunar/thunar-window.c
+@@ -766,20 +766,20 @@ thunar_window_init (ThunarWindow *window)
+                    G_OBJECT (window->spinner), "visible");
+ 
+   /* check if we need to add the root warning */
+-  if (G_UNLIKELY (geteuid () == 0))
+-    {
+-      /* add the bar for the root warning */
+-      infobar = gtk_info_bar_new ();
+-      gtk_info_bar_set_message_type (GTK_INFO_BAR (infobar), GTK_MESSAGE_WARNING);
+-      gtk_widget_set_hexpand (infobar, TRUE);
+-      gtk_grid_attach (GTK_GRID (window->grid), infobar, 0, 2, 1, 1);
+-      gtk_widget_show (infobar);
+-
+-      /* add the label with the root warning */
+-      label = gtk_label_new (_("Warning: you are using the root account. You may harm your system."));
+-      gtk_container_add (GTK_CONTAINER (gtk_info_bar_get_content_area (GTK_INFO_BAR (infobar))), label);
+-      gtk_widget_show (label);
+-    }
++//  if (G_UNLIKELY (geteuid () == 0))
++//    {
++//      /* add the bar for the root warning */
++//      infobar = gtk_info_bar_new ();
++//      gtk_info_bar_set_message_type (GTK_INFO_BAR (infobar), GTK_MESSAGE_WARNING);
++//      gtk_widget_set_hexpand (infobar, TRUE);
++//      gtk_grid_attach (GTK_GRID (window->grid), infobar, 0, 2, 1, 1);
++//      gtk_widget_show (infobar);
++//
++//      /* add the label with the root warning */
++//      label = gtk_label_new (_("Warning: you are using the root account. You may harm your system."));
++//      gtk_container_add (GTK_CONTAINER (gtk_info_bar_get_content_area (GTK_INFO_BAR (infobar))), label);
++//      gtk_widget_show (label);
++//    }
+ 
+   window->paned = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
+   gtk_container_set_border_width (GTK_CONTAINER (window->paned), 0);
